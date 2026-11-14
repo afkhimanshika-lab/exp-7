@@ -1,0 +1,111 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.app {
+    max-width: 750px;
+    margin: 40px auto;
+    padding: 25px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.subtitle {
+    text-align: center;
+    color: #777;
+}
+
+.note-form {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 25px 0;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    margin-right: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.notes-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.note {
+    background: white;
+    padding: 18px;
+    border-radius: 8px;
+    overflow-wrap: anywhere;
+}
+
+.note h3 {
+    margin-top: 0;
+}
+
+.note p {
+    color: #555;
+    white-space: pre-wrap;
+}
+
+.delete {
+    background-color: #a33;
+}
+
+.delete:hover {
+    background-color: #822;
+}
+
+.cancel {
+    background-color: #777;
+}
+
+.empty {
+    color: #777;
+    grid-column: 1 / -1;
+}
+
+@media (max-width: 600px) {
+    .app {
+        margin: 15px auto;
+        padding: 15px;
+    }
+
+    .notes-container {
+        grid-template-columns: 1fr;
+    }
+}
